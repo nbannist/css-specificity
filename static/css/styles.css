@@ -1,0 +1,227 @@
+/* styles.css 
+ @author: Nicholas Bannister-Andrews
+ @datetime: 
+*/
+
+
+/* https://github.com/paulirish/html5-boilerplate/issues/#issue/294 */
+pre {  
+	padding: 15px; 
+	white-space: pre-wrap; 
+	word-wrap: break-word; 
+}
+textarea { 
+	font-family: monospace; 
+	width: 100%; 
+	height: 175px;
+	margin: 5px 0px 5px 0px;
+}
+input[type="button"].clear-textarea-on-click {
+	float:right;
+	color: #eee;
+	border: 1px solid #633;
+	border-radius: 10px;
+	/* Thank you, CSS3Please.com! */
+	background-color: #cc6666;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#cc6666), to(#993333)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #cc6666, #993333); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #cc6666, #993333); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #cc6666, #993333); /* IE10 */
+	background-image:      -o-linear-gradient(top, #cc6666, #993333); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #cc6666, #993333);
+}
+input[type="submit"] {
+	float:left;
+	color: #eee;
+	border: 1px solid #14D; /* #66c; */
+	border-radius: 10px;
+	/* Thank you, CSS3Please.com! */
+	background-color: #6699ff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#6699ff), to(#1133cc)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #6699ff, #1133cc); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #6699ff, #1133cc); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #6699ff, #1133cc); /* IE10 */
+	background-image:      -o-linear-gradient(top, #6699ff, #1133cc); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #6699ff, #1133cc);
+}
+
+input, .textarea {
+	-webkit-box-shadow: 1px 1px 2px #333; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+     -moz-box-shadow: 1px 1px 2px #333; /* FF3.5 - 3.6 */
+          box-shadow: 1px 1px 2px #333; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+.codehilite, 
+.highlight { margin-bottom: 24px; }
+.clear { clear: both; } /* Look up the better way to clear floats without markup; I can never remember it. */
+body {
+    color: #666;
+    background-color: #FAFAFA;
+    font-family: 'Buda', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 { font-family: 'IM Fell Double Pica SC', serif; }
+.w3c header h1 {
+    color: #eee;
+    margin-bottom: 0px;
+}
+.w3c header h2 { margin-bottom: 0px; }
+header {
+    margin: 0px 0px 0px 0px;
+    padding: 30px 30px 0px 30px;
+    text-align: right;
+	/* Thank you, CSS3Please.com! */
+	background-color: #333;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#444)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #000, #444); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #000, #444); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #000, #444); /* IE10 */
+	background-image:      -o-linear-gradient(top, #000, #444); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #000, #444);
+    
+    color: #999;
+    border-bottom: 1px solid #333;
+    /* SHADOWs */   
+    -webkit-box-shadow: 0 0 10px 1px #888; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+       -moz-box-shadow: 0 0 10px 1px #888; /* FF3.5 - 3.6 */
+            box-shadow: 0 0 10px 1px #888; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+}
+#main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.row.htmlmarkup {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+div.document {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.document {
+    background-color: #fff;
+}
+.document ul,
+.document dl,
+.document ol {
+    margin-left: 40px;
+}
+.document h1 { color: #333; }
+footer#foot1 {
+    margin: 0px 0px 0px 0px;
+    padding: 30px 30px 20px 30px;
+	/* Thank you, CSS3Please.com! */
+	background-color: #339;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eef), to(#ccf)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #eef, #ccf); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:    -moz-linear-gradient(top, #eef, #ccf); /* FF3.6 */
+	background-image:     -ms-linear-gradient(top, #eef, #ccf); /* IE10 */
+	background-image:      -o-linear-gradient(top, #eef, #ccf); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #eef, #ccf);
+    color: #333;
+    border-top: 1px solid #ccc;
+    
+    /* SHADOWs */
+    -webkit-box-shadow: 0 0 10px 1px #888;
+       -moz-box-shadow: 0 0 10px 1px #888;
+            box-shadow: 0 0 10px 1px #888;
+}
+footer#foot2 {
+	background-color: #ccf;
+	color: #333;
+	padding-bottom: 20px;
+	font-size: 14px;
+}
+footer#foot2 p { margin-bottom: 0px; }
+.software-list li { margin-bottom: 0px; }
+.software-list { margin-left: 20px; }
+h4 {
+    font-size: 14px;
+    margin-bottom: 24px;	/* Changing this will break the baseline grid. */
+    font-weight: lighter;
+    font-weight: bold;
+    font-style: italic;
+}
+
+h5 {
+    font-size: 12px;
+    margin-bottom: 24px;	/* Changing this will break the baseline grid. */
+    font-weight: lighter;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 12px;
+    margin-bottom: 24px;	/* Changing this will break the baseline grid. */
+    font-weight: lighter;
+    font-style: italic;
+}
+#output {
+	counter-reset: line-number;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: "Courier New", Courier, monospace;
+	color: #333;
+}
+#output div {
+	margin-left: -20px;
+    color: #111;
+}
+#output div.selector:before {
+	counter-increment: line-number;
+	content: "" counter(line-number) ") ";
+}
+#output .specificity {
+	color: #393;
+	text-shadow: #cfc 0.1em 0.1em 0.1em;
+}
+#output .selector {
+	color: #33C;
+	/* text-shadow: color +horizontal-offset(right) +vertical-offset(bottom) blur-distance */
+	/* text-shadow: color -horizontal-offset(left) -negative-offset(top) blur-distance */
+	text-shadow: #ccf 0.1em 0.1em 0.1em;
+}
+#output span.selector { word-wrap: break-word; }
+#output div.selector-details {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	padding: 5px 10px 10px 30px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+#output div.selector-details span.label {
+	color: #999;
+	width: 110px;
+	float: left;
+}
+#output div.selector-details span.count {
+	color: #666;
+	padding: 5px;
+}
+#output div.selector-details span.list {
+	color: #111;
+	word-wrap: break-word;
+}
+.ignored {
+    font-style: italic;
+    color: #999;
+}
+.ignored span { color: #C99; }
+.see-also { font-size: 12px; }
+ol.numbered {
+    list-style: decimal;
+    margin-left: 1em;
+    padding-left: 1em;
+}
+.row h2 { margin-top: 30px; }
+.row h2:first-child { margin-top: 0px; }
+.right-ruled-column { border-right: 1px solid #ccc; }
+ div.right-ruled-column > * { padding-right: 30px; }

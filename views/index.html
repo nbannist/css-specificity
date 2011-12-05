@@ -1,0 +1,102 @@
+{% extends "global_master_page.html" %}
+
+{% block header %}<!-- header -->
+<hgroup class="twelvecol last">
+    <h1>CSS Specificity Calculator</h1>
+</hgroup><!-- /header -->
+{% endblock %}
+
+{% block main %}<!-- main -->
+<form action="" method="POST" encoding="application/x-www-form-urlencoded">
+<div class="row">
+    <div class="sixcol input right-ruled-column">
+        <h2>Input</h2>
+        <fieldset>
+        	<legend>CSS Selectors (<a href="#notes">see notes</a>)</legend>
+
+
+
+<textarea id="css_raw" name="css_raw" >
+html > body 
+html.ie678 ~ body.welcome > #main-content.tri-fold input[type="submit"] 
+html.ie678 > body.welcome + #main-content.tri-fold a[href$="https://"]
+html.ie678 > body.welcome > #main-content.tri-fold input[type="submit"]::first-letter:hover:checked
+#error-container ul li span.warning a[href="http://blah.com/blah"]:link::first-letter
+/* modernizr */
+.w3c.js.flexbox.canvas.canvastext.webgl.no-touch.geolocation.postmessage.websqldatabase.indexeddb.hashchange.history.draganddrop.websockets.rgba.hsla.multiplebgs.backgroundsize.borderimage.borderradius.boxshadow.textshadow.opacity.cssanimations.csscolumns.cssgradients.cssreflections.csstransforms.csstransforms3d.csstransitions.fontface.video.audio.localstorage.sessionstorage.webworkers.applicationcache.svg.inlinesvg.smil.svgclippaths
+/*  */
+#body 
+#body.frontpage 
+#body.frontpage.default
+#body.frontpage.three-columned
+div#main-content
+div#main-content a
+div#main-content a:link
+div#main-content a:visited
+div#main-content a:active
+div#main-content a:hover
+div#main-content a:focus
+body#body.body
+</textarea>
+
+
+
+
+        	<div class="clearfix">
+        		<input type="submit" value="Calculate" id="calculate_btn" name="calculate_btn" />
+        		<input type="button" value="Clear Styles" class="clear-textarea-on-click" />
+        	</div>
+        </fieldset>
+        
+        
+        
+        
+        <h2>CSS Specificity Rules</h2>
+        <p>Rules from: <a href="http://reference.sitepoint.com/css/specificity" target="_blank">http://reference.sitepoint.com/css/specificity</a></p>
+        <ol class="numbered">
+            <li class="ignored">If one declaration is from a style attribute, rather than a rule with a selector (an inline style), it has the highest specificity. If none of the declarations are inline, proceed to step two. <span>(ignored here)</span></li>
+			<li>Count the ID selectors. The declaration with the highest count has the highest specificity. If two or more have the same number of ID selectors, or they all have zero ID selectors, proceed to step three.</li>
+			<li>Count the class selectors (for example, .test), attribute selectors (for example, [type="submit"]), and pseudo-classes (for example, :hover). The declaration with the highest total has the highest specificity. If two or more have the same total, or they all have totals of zero, proceed to step four.</li>
+			<li>Count the element type selectors (for example div) and pseudo-elements (for example, :first-letter). The declaration with the highest total has the highest specificity.</li>
+        </ol>
+        <p class="see-also">See also <a href="http://www.w3.org/TR/CSS2/cascade.html#specificity" target="_blank">"Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification - 6.4.3 Calculating a selector's specificity"</a> (www.w3.org/TR/CSS2/cascade.html#specificity)</p>
+        
+        
+        
+        
+        
+        <h2 id="notes">Notes</h2>
+        <p>This app doesn't process all rule types possible in a stylesheet. 
+        	It has limitations, which I hope to fix in future versions.
+        	Example: this application will break if your stylesheet includes @rules.
+        	I wanted to keep it simple for now, but hopefully soon, 
+        	I'll use a real css parser and include more details in the output.</p>
+        	
+        	
+        	
+        	
+        	
+        	
+        <h2>Version Info</h2>
+        <p>This site is running version 1.0.<p>
+        <ul>
+        	<li><span class="date">(2011.12.04)</span> <span class="version">Version 1.0</span>
+        		<p>Initial release. </p>
+        	</li>
+        </ul>
+        
+        
+        
+        
+    </div>
+    <div class="sixcol output last">
+        <h2>Output</h2>
+        
+        <div id="output"></div>
+    </div>
+</div>
+</form>
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/script.js"></script>
+{% endblock %}
