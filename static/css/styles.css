@@ -113,11 +113,18 @@ div.document {
     margin-left: 40px;
 }
 .document h1 { color: #333; }
-footer#foot1 {
+footer {
+    /* SHADOWs */
+    -webkit-box-shadow: 0 0 10px 1px #888;
+       -moz-box-shadow: 0 0 10px 1px #888;
+            box-shadow: 0 0 10px 1px #888;
+}
+footer #foot1 {
     margin: 0px 0px 0px 0px;
     padding: 30px 30px 20px 30px;
 	/* Thank you, CSS3Please.com! */
-	background-color: #339;
+	background-color: #CCF;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeff', endColorstr='#ccccff');
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#eef), to(#ccf)); /* Saf4+, Chrome */
 	background-image: -webkit-linear-gradient(top, #eef, #ccf); /* Chrome 10+, Saf5.1+, iOS 5+ */
 	background-image:    -moz-linear-gradient(top, #eef, #ccf); /* FF3.6 */
@@ -126,21 +133,18 @@ footer#foot1 {
 	background-image:         linear-gradient(top, #eef, #ccf);
     color: #333;
     border-top: 1px solid #ccc;
-    
-    /* SHADOWs */
-    -webkit-box-shadow: 0 0 10px 1px #888;
-       -moz-box-shadow: 0 0 10px 1px #888;
-            box-shadow: 0 0 10px 1px #888;
 }
-footer#foot2 {
+footer #foot2 {
 	background-color: #ccf;
 	color: #333;
 	padding-bottom: 20px;
 	font-size: 14px;
 }
-footer#foot2 p { margin-bottom: 0px; }
+footer #foot2 p { margin-bottom: 0px; }
+
 .software-list li { margin-bottom: 0px; }
 .software-list { margin-left: 20px; }
+
 h4 {
     font-size: 14px;
     margin-bottom: 24px;	/* Changing this will break the baseline grid. */
@@ -225,3 +229,8 @@ ol.numbered {
 .row h2:first-child { margin-top: 0px; }
 .right-ruled-column { border-right: 1px solid #ccc; }
  div.right-ruled-column > * { padding-right: 30px; }
+
+.date, 
+.version {
+    font-weight: bold;
+}

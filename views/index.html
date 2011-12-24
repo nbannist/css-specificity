@@ -78,10 +78,14 @@ body#body.body
         	
         	
         <h2>Version Info</h2>
-        <p>This site is running version 1.0.<p>
+        <p class="version">This site is running version 1.0.1.<p>
         <ul>
         	<li><span class="date">(2011.12.04)</span> <span class="version">Version 1.0</span>
-        		<p>Initial release. </p>
+        		<p>Initial release.</p>
+        	</li>
+        	<li><span class="date">(2011.12.24)</span> <span class="version">Version 1.0.1</span>
+        		<p>Fixed: Bug where the instructions were repeated upon clicking the "calculate" button more than once.</p>
+        		<p>Fixed: IE9 bug (or at least an inconsistency from other browsers) where the box-shadow on the footer didn't render properly.</p>
         	</li>
         </ul>
         
@@ -91,7 +95,7 @@ body#body.body
     </div>
     <div class="sixcol output last">
         <h2>Output</h2>
-        
+        <p id="instructions"></p>
         <div id="output"></div>
     </div>
 </div>

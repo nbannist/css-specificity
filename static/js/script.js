@@ -79,7 +79,8 @@ $(document).ready(function() {
 		var lines = output.split(selector_separator); // {...}
 		$('#output').empty(); // clear Output
 		splitLines(lines);
-		$('#output').before('<p>If you click a selector in the output below, it will show/hide the details below it.</p>');
+		$('#instructions').empty();
+		$('#instructions').append('If you click a selector in the output below, it will show/hide the details below it.');
 		return false;
 	});
 	

@@ -50,42 +50,43 @@
             
         {% endblock %}
     </div>
-    <footer id="foot1">
-    {% block footer %}
-    <div class="container">
-        <div class="fourcol">
-            <h2>About</h2>
-            <p>This page was created to calculate the CSS specificity of a stylesheet (not including the inline or style rules; the "a" part of the equation). 
-            	Before this little project, I didn't have a clear understanding of the specificity rules. 
-            	Now, after creating this page, I don't think I'll need this application. :)</p>
-        </div>
-        <div class="fourcol">
-        	<h2>Thanks</h2>
-        	<ul>
-        	    <li><a href="http://regexpal.com/">regexpal.com</a></li>
-        	    <li><a href="http://docs.python.org/library/re.html">docs.python.org/library/re.html</a></li>
-        	    <li><a href="http://developer.mozilla.org/">developer.mozilla.org</a></li>
-        	    <li><a href="http://html5boilerplate.com/">html5boilerplate.com</a></li>
-        	    <li><a href="http://cssgrid.net/">cssgrid.net</a></li>
-        	    <li><a href="http://css3please.com/">css3please.com</a></li>
-        	    <li><a href="http://www.google.com/webfonts">google.com/webfonts</a></li>
-        	</ul>
-        </div>
-        <div class="fourcol last">
-            <h2>Code</h2>
-            <p><a href="https://github.com/nbannist/css-specificity">The code for this little application</a> is hosted on <a href="http://github.com">Github</a>.</p>
-            <p>If you find a bug, please contact me: <a href="mailto:nbannist@gmail.com">nbannist@gmail.com</a></p>
-        </div>
-    </div>
-    {% endblock %}
-        <br class="clear" />
-    </footer>
-    <footer id="foot2">
-    <div class="container">
-        <div class="twlevecol clearfix">
-        	<p>Copyright &copy; 2011 <a href="http://nbannist.appspot.com/">Nicholas Bannister-Andrews</a></p>
-        </div>
-    </div>
+    <footer>
+		<div id="foot1" class="clearfix">
+		{% block footer %}
+			<div class="container">
+				<div class="fourcol">
+					<h2>About</h2>
+					<p>This page was created to calculate the CSS specificity of a stylesheet (not including the inline or style rules; the "a" part of the equation). 
+						Before this little project, I didn't have a clear understanding of the specificity rules. 
+						Now, after creating this page, I don't think I'll need this application. :)</p>
+				</div>
+				<div class="fourcol">
+					<h2>Thanks</h2>
+					<ul>
+						<li><a href="http://regexpal.com/">regexpal.com</a></li>
+						<li><a href="http://docs.python.org/library/re.html">docs.python.org/library/re.html</a></li>
+						<li><a href="http://developer.mozilla.org/">developer.mozilla.org</a></li>
+						<li><a href="http://html5boilerplate.com/">html5boilerplate.com</a></li>
+						<li><a href="http://cssgrid.net/">cssgrid.net</a></li>
+						<li><a href="http://css3please.com/">css3please.com</a></li>
+						<li><a href="http://www.google.com/webfonts">google.com/webfonts</a></li>
+					</ul>
+				</div>
+				<div class="fourcol last">
+					<h2>Code</h2>
+					<p><a href="https://github.com/nbannist/css-specificity">The code for this little application</a> is hosted on <a href="http://github.com">Github</a>.</p>
+					<p>If you find a bug, please contact me: <a href="mailto:nbannist@gmail.com">nbannist@gmail.com</a></p>
+				</div>
+			</div>
+		{% endblock %}
+		</div>
+		<div id="foot2" class="clearfix">
+			<div class="container">
+				<div class="twlevecol clearfix">
+					<p>Copyright &copy; 2011 <a href="http://nbannist.appspot.com/">Nicholas Bannister-Andrews</a></p>
+				</div>
+			</div>
+		</div>
     </footer>
   </div> <!-- end of #container -->
 
