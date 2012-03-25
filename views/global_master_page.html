@@ -15,52 +15,37 @@
   <meta name="description" content="{{ page_description }}">
   <meta name="author" content="{{ page_author }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/htmlboilerplate.css">
-  <!-- The 1140px Grid -->
-  <link rel="stylesheet" href="/css/1140.css" type="text/css" media="screen" />
-  <!--[if lte IE 9]>
-  <link rel="stylesheet" href="/css/ie.css" type="text/css" media="screen" />
-  <script src="/js/libs/ie.js"></script>
-  <![endif]-->
-  <!-- Type and image presets - NOT ESSENTIAL -->
-  <link rel="stylesheet" href="/css/typeimg.css" type="text/css" media="screen" />
-  <!-- Make minor type adjustments for 1024 monitors -->
-  <link rel="stylesheet" href="/css/smallerscreen.css" media="only screen and (max-width: 1023px)" />
-  <!-- Resets grid for mobile -->
-  <link rel="stylesheet" href="/css/mobile.css" media="handheld, only screen and (max-width: 767px)" />
-  <!-- Put your layout here -->
-  <link rel="stylesheet" href="/css/layout.css" type="text/css" media="screen" />
-  <!-- App Styles --> 
-  <link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen" />
+  <link rel="stylesheet/less" href="/less/bootstrap/bootstrap.less">
   <script src="/js/libs/modernizr-1.6.min.js"></script>
+  <script src="/js/libs/less-1.3.0.min.js"></script>
 </head>
 <body>
   <div id="container">
     <header>
     <div class="container">
-        <div class="row">
+        <div class="row-fluid">
         {% block header %}
             
         {% endblock %}
         </div>
     </div>
     </header>
-    <div id="main" class="container">
+    <div id="main" class="container fluid">
         {% block main %}
             
         {% endblock %}
     </div>
-    <footer>
-		<div id="foot1" class="clearfix">
+    <footer id="footer">
+		<div class="container fluid">
 		{% block footer %}
-			<div class="container">
-				<div class="fourcol">
+			<div class="row-fluid">
+				<div class="span4">
 					<h2>About</h2>
 					<p>This page was created to calculate the CSS specificity of a stylesheet (not including the inline or style rules; the "a" part of the equation). 
 						Before this little project, I didn't have a clear understanding of the specificity rules. 
 						Now, after creating this page, I don't think I'll need this application. :)</p>
 				</div>
-				<div class="fourcol">
+				<div class="span4">
 					<h2>Thanks</h2>
 					<ul>
 						<li><a href="http://regexpal.com/">regexpal.com</a></li>
@@ -72,7 +57,7 @@
 						<li><a href="http://www.google.com/webfonts">google.com/webfonts</a></li>
 					</ul>
 				</div>
-				<div class="fourcol last">
+				<div class="span4">
 					<h2>Code</h2>
 					<p><a href="https://github.com/nbannist/css-specificity">The code for this little application</a> is hosted on <a href="http://github.com">Github</a>.</p>
 					<p>If you find a bug, please contact me: <a href="mailto:nbannist@gmail.com">nbannist@gmail.com</a></p>
@@ -80,10 +65,10 @@
 			</div>
 		{% endblock %}
 		</div>
-		<div id="foot2" class="clearfix">
-			<div class="container">
-				<div class="twlevecol clearfix">
-					<p>Copyright &copy; 2011 <a href="http://nbannist.appspot.com/">Nicholas Bannister-Andrews</a></p>
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span12">
+					<p>Copyright &copy; 2012 <a href="http://nbannist.appspot.com/">Nicholas Bannister-Andrews</a></p>
 				</div>
 			</div>
 		</div>
@@ -91,6 +76,7 @@
   </div> <!-- end of #container -->
 
   <script src="/js/libs/jquery-1.7.min.js"></script>
+  
 	{% block scripts %}
 	
 	{% endblock %}

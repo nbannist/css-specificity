@@ -7,9 +7,11 @@
 {% endblock %}
 
 {% block main %}<!-- main -->
+
+
 <form action="" method="POST" encoding="application/x-www-form-urlencoded">
-<div class="row">
-    <div class="sixcol input right-ruled-column">
+<div class="row-fluid">
+    <div class="span6 input">
         <h2>Input</h2>
         <fieldset>
         	<legend>CSS Selectors (<a href="#notes">see notes</a>)</legend>
@@ -43,8 +45,9 @@ body#body.body
 
 
         	<div class="clearfix">
-        		<input type="submit" value="Calculate" id="calculate_btn" name="calculate_btn" />
-        		<input type="button" value="Clear Styles" class="clear-textarea-on-click" />
+        		<input type="submit" value="Calculate" class="btn btn-primary btn-primary btn-small" id="calculate_btn" name="calculate_btn" />
+        		
+        		<input type="button" value="Clear Styles" class="btn btn-warning btn-small clear-textarea-on-click" />
         	</div>
         </fieldset>
         
@@ -87,13 +90,16 @@ body#body.body
         		<p>Fixed: Bug where the instructions were repeated upon clicking the "calculate" button more than once.</p>
         		<p>Fixed: IE9 bug (or at least an inconsistency from other browsers) where the box-shadow on the footer didn't render properly.</p>
         	</li>
+        	<li><span class="date">(2012.03.22)</span> <span class="version">Version 1.1.0</span>
+        	    <p>Added: Twitter's Bootstrap w/LESS CSS.</p>
+        	</li>
         </ul>
         
         
         
         
     </div>
-    <div class="sixcol output last">
+    <div class="span6 output last">
         <h2>Output</h2>
         <p id="instructions"></p>
         <div id="output"></div>
@@ -102,5 +108,5 @@ body#body.body
 </form>
 {% endblock %}
 {% block scripts %}
-<script src="/static/js/script.js"></script>
+<script src="/js/script.js"></script>
 {% endblock %}
